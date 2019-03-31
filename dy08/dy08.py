@@ -70,12 +70,3 @@ class DY08:
 
         self.pi.wave_tx_stop()
         self.pi.write(self.pin, 0)
-
-if __name__ == "__main__":
-    dy08 = DY08(pigpio.pi(), 17)
-
-    while True:
-        dy08.send(42, 1);
-        time.sleep(1)
-        dy08.send(42, 0);
-        time.sleep(1)
